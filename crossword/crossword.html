@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <style>
+      .gridbox {
+          width: 12px;
+      }
+    </style>
+  </head>
+<body>
+
+  <p id="debug">Debug
+  </p>
+
+  <p>
+    <input type="button" id="dirbutton" onclick="changeDirection()" value="hello"/>
+  </p>
+  
+<form id="grid">
+</form>
+
+  <p>
+    <input type="button" value="Export" onclick="doExport()"/>
+    <textarea id="export" rows="5" cols="80">
+    </textarea>
+  </p>
+
+  <p>
+    <input type="button" value="Import" onclick="doImport()"/>
+    <textarea id="import" rows="5" cols="80">
+    </textarea>
+  </p>
+
+<script src="crossword.js"></script>
+
+</body>
+
+</html>
