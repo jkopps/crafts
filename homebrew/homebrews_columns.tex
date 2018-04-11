@@ -1,74 +1,97 @@
 \documentclass[12pt]{article}
 
-\usepackage[landscape,left=1in,right=1in]{geometry}
+\usepackage[landscape,paperheight=10in, paperwidth=8in,
+  left=0.5in,right=0.5in]{geometry}
 \setlength{\parindent}{0cm}
 \pagenumbering{gobble}
 
+\setlength{\hoffset}{0pt}
+
+\newcommand{\setbrew}[5]{
+\begin{minipage}[t]{0.30\textwidth}
+\begin{center}
+  {\huge #1}
+
+\medskip
+  
+{\large #2
+
+  \medskip
+
+  \textit{Malts}: #3
+  
+  \smallskip
+  
+  \textit{Hops}: #4
+  
+  \medskip
+  
+  #5
+}\ 
+\end{center}
+\end{minipage}
+}
+
+\newcommand{\brewrule}{
+  \hspace*{\fill} \rule[-8.5cm]{1pt}{9.25cm} \hspace*{\fill}
+}
+
 \begin{document}
 
-\setlength{\hoffset}{0pt}
-\newlength{\colwidth}
-\setlength{\colwidth}{0.3\textwidth}
 
 \begin{center}
 
-\begin{minipage}[t]{\colwidth}
+{\Huge \scshape Fine Handcrafted Ales }
 
-\begin{center}
+\bigskip
 
-{\Huge Puck}
+{\Large brewed at home by the Groom and Best Man}
 
-{\large
-Inspired by the new wave of IPAs from New England, this brew, 
-hopped with Centennial, Motueka, Amarillo, Citra and Cascade, 
-favors aroma over bitterness.
+\vspace*{\fill}
 
-\begin{flushleft}      
-Hops: Centennial, Motueka, Amarillo, Citra, Cascade \\
-Malts: US~2~Row, Flaked Wheat, Flaked Oats, Crystal~20
-\end{flushleft}
-
-\smallskip
-6.5~\%ABV, 57~IBUs
-      }
-      \end{center}
-\end{minipage}
-% 
-\begin{minipage}[t]{\colwidth}
-\begin{center}
-  {\Huge Jacques Rye Amber}
-
-{\large
-  Mashed with 27\% rye and hopped with Galena, Nugget, Centennial 
-  and Willamette, this strong red ale is earthy and bitter.  A welcome 
-  companion when exiled to the forest of Arden.
-
-  \textit{Hops}: Galena, Nugget, Centennial, Willamette
-  % Malts: US 2 Row, Rye Malt (27\%), Melanoiden, Crystal 80, Special Roast
-
-  \smallskip
-  8 \% ABV, 68 IBUs
+\setbrew{The IPA}
+{
+Inspired by the new wave of IPAs from New England.  Wheat and oats in
+the mash give a slight haze, and late hop additions favor flavor over
+bitterness.
 }
-\end{center}
-\end{minipage}
+{US~2~Row, Flaked Wheat, Flaked Oats, Crystal~20}
+{Centennial, Motueka, Amarillo, Citra, Cascade}
+{6.5~\%ABV, 57~IBUs}
 %
-\begin{minipage}[t]{\colwidth}
-\begin{center}
-  {\Huge Macbeth Scotch Ale}
+\brewrule
+\setbrew{The Red Ale}
+{
+  With a grain bill of 27\% rye and plenty of high-alpha hops, this strong
+  amber ale is earthy and bitter.
+  A welcome companion when exiled to the forest of Arden.
+}
+{ US~2~Row, Rye~Malt, Melanoiden, Crystal~80, Special~Roast }
+{ Galena, Nugget, Centennial, Willamette }
+{ 8\%~ABV, 68~IBUs }
+%
+\brewrule
+\setbrew{The Scotch Ale}
+{
+  An homage to Old Chub and the Thane of Cawdor, this roasty 
+  Scotch Ale features peat smoke and a malty finish.
+  Drink too many and you may be seeing Banquo's ghost!
+}
+{ UK~2~Row, Crystal~40, Munich Malt, Peat~Smoked Malt, Roasted
+  Barley, Chocolate Malt
+}
+{ Northern Brewer }
+{ 9\% ABV, 25 IBUs }
+
+\vspace*{\fill}
 
 {\large
-  An homage to both Old Chub and the Thane of Cawdor, this roasty 
-  Scotch Ale features peat smoke and a malty finish.  Drink too 
-  many and you may be seeing Banquo's ghost!
-
-  % Malts: UK 2 Row, Crystal 40, Munich Malt, Peat Smoked Malt, Roasted
-  % Barley, Chocolate Malt
-  % Hops: Northern Brewer
-  \smallskip
-  9 \% ABV, 25 IBUs
+\textit{Dost thou think, because thou art 
+  virtuous, there shall be no more cakes and ale?} \\
+- Sir Toby Belch
 }
-\end{center}
-\end{minipage}
+
+\vspace*{\fill}
 
 \end{center}
 \end{document}
