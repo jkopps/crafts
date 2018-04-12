@@ -1,0 +1,10 @@
+\documentclass{article}
+\usepackage{pdfpages}
+\usepackage[paperwidth=8.5in,paperheight=14in,top=0.5in,bottom=0.5in,left=1in,right=1in,landscape]{geometry}
+
+\begin{document}
+
+\includepdf[nup=2x1,pages={1,2},noautoscale]{crossword.pdf}
+\includepdf[pages={3},angle=180,noautoscale]{crossword.pdf}
+
+\end{document}

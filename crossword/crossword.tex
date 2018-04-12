@@ -1,13 +1,17 @@
 \documentclass[10pt]{article}
-\usepackage[small]{cwpuzzle}
-\usepackage[margin=0in]{geometry}
+\usepackage[paperheight=8.5in,paperwidth=7in,top=0.5in,bottom=0.5in,left=0.5in,right=0.5in]{geometry}
+
+\usepackage[tiny,nocenter]{cwpuzzle}
+
+% no page numbers
+\pagenumbering{gobble}
 
 \begin{document}
 
 \input{crossword_in}
-
-
+\input{clues_in}
 
 \PuzzleSolution
 \input{crossword_in}
+
 \end{document}
