@@ -94,6 +94,7 @@ def formatPuzzle(chars, nr, nc, clues):
         ret += '|.\n'
     ret += '\\end{Puzzle}\n'
 
+    ret += '\\newcommand{\\blank}{\\rule[-0.1pt]{15pt}{0.5pt}\\ }\n\n'
     ret += '\\begin{PuzzleClues}{\\textbf{Across}}\\\\\n'
     for (n, w) in grid.acrossClues:
         cl = clues[w]
