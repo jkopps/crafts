@@ -93,7 +93,9 @@ def formatPuzzle(chars, nr, nc, clues):
             ret += '|%s %s ' % (n,c)
         ret += '|.\n'
     ret += '\\end{Puzzle}\n'
+    retPuzzle = ret
 
+    ret = ''
     ret += '\\newcommand{\\blank}{\\rule[-0.1pt]{15pt}{0.5pt}\\ }\n\n'
     ret += '\\begin{PuzzleClues}{\\textbf{Across}}\\\\\n'
     for (n, w) in grid.acrossClues:
@@ -118,6 +120,9 @@ def formatPuzzle(chars, nr, nc, clues):
             cl = cl.replace('#' + ref, grid.getClue(ref))
         ret += '    \\Clue{%d}{%s}{%s}\\\\\n' % (n, w, cl)
     ret += '\\end{PuzzleClues}\n'
+    retClues = ret
+
+    return retPuzzle, retClues
 
     # generate list of words
     if False:
@@ -213,5 +218,8 @@ if __name__ == '__main__':
     chars, nr, nc = trim(chars, nr, nc)
     chars, nr, nc = transpose(chars, nr, nc)
 
-    formatted = formatPuzzle(chars, nr, nc, clues)
-    sys.stdout.write(formatted)
+    fmtPuzzle, fmtClues = formatPuzzle(chars, nr, nc, clues)
+    with open('crossword_in.tex', 'w') as fh:
+        fh.write(fmtPuzzle)
+    with open('clues_in.tex', 'w') as fh:
+        fh.write(fmtClues)
